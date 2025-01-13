@@ -48,16 +48,19 @@ render_menu('clients');
                         </span>
                     </div>
                 </div>
-                <span>
+                <span style="display: flex; align-items: center;">
                     <?php
                     $expiration = strtotime($row['expires_at']);
                     $current_date = time();
                     if ($expiration < $current_date) {
                         echo '<span style="color: red;">Membresia finalizada</span>';
                     } else {
-                        echo 'Membresia finaliza: '. date('M d, Y', $expiration);
+                        echo 'Membresia finaliza: ' . date('M d, Y', $expiration);
                     }
                     ?>
+                    <a href="pay.php?id=<?php echo $row['id']; ?>">
+                        <img src="pagar.svg" alt="Pagar" style="width: 30px; height: 30px;">
+                    </a>
                 </span>
             </div>
         <?php endwhile; ?>

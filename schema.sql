@@ -8,6 +8,7 @@ CREATE TABLE staff (
     fired_at DATETIME -- Fecha de despido
 );
 
+-- lalohao@gmail.com // hello
 INSERT INTO `staff` (`id`, `email`, `hashed_password`, `nombre`, `rol`, `hired_at`, `fired_at`)
     VALUES (NULL, 'lalohao@gmail.com', '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824', 'Eduardo Vazquez', 'admin', NOW(), '');
 
